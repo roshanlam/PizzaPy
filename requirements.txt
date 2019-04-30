@@ -1,0 +1,5 @@
+requests
+pyhamcrest
+xmltodict
+pytest
+mock
