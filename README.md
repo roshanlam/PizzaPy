@@ -15,4 +15,4 @@ have fun
 
 # To-Do
 
--[ ] Add a Speech Feature So People can order pizza through speech.
+- [ ] Add a Speech Feature So People can order pizza through speech.
