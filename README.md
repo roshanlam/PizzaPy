@@ -3,16 +3,17 @@ Order Pizza using Python
 
 # Setup
 _____________
-install python3
+* install python3
 
-download this repository
+* download this repository
 
-install the requirements of the repository `pip install -r requirements.txt`
+* install the requirements of the repository `pip install -r requirements.txt`
 
-start a python3 interpreter inside of the folder called PizzaPy
+* start a python3 interpreter inside of the folder called PizzaPy
 
-have fun
+* have fun
 
 # To-Do
 
-- [ ] Add a Speech Feature So People can order pizza through speech.
+- [ ] Market this as a app and software way for people with lacking motor dexterity to be able to place orders via speech
+- [ ] Update the ReadMe.
