@@ -28,7 +28,7 @@ with io.open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 class PublishCommand(Command):
     """Support setup.py publish."""
 
-    description = 'Build and publish the package.'
+    description = ''
     user_options = []
 
     @staticmethod
