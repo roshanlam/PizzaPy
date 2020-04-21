@@ -43,7 +43,7 @@ class AssistantInfoSkills(AssistantSkill):
     def _create_skill_response(cls, response):
 
         #################################################
-        ########For existing skills (basic skills)#######
+        ######## For existing skills (basic skills) #####
         #################################################
         
         basic_skills = db.get_documents(collection='enabled_basic_skills')
@@ -52,7 +52,7 @@ class AssistantInfoSkills(AssistantSkill):
             response = response + '{0}) '.format(skill_id) + skill.get('description') + '\n'
 
         #######################################################
-        ##For learned skills (created from 'learn' skill)######
+        ## For learned skills (created from 'learn' skill) ####
         #######################################################
         skills = db.get_documents(collection='learned_skills')
         response = response + '\n' + '* Learned Skills:' + '\n'
