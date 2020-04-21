@@ -58,7 +58,7 @@ class PublishCommand(Command):
         sys.exit()
 
 
-# Where the magic happens:
+# This is where the magic happens:
 setup(
     name='PizzaPy',
 
