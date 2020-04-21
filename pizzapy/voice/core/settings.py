@@ -12,7 +12,7 @@ ROOT_LOG_CONF = {
             'class': 'logging.handlers.RotatingFileHandler',
             'level': 'DEBUG',
             'formatter': 'detailed',
-            'filename': '/var/log/jarvis.log',
+            'filename': '/var/log/Domno.log',
             'mode': 'a',
             'maxBytes': 10000000,
             'backupCount': 3,
@@ -39,12 +39,15 @@ Keys Description:
       In 'InputMode.TEXT.value' mode, the assistant waits to write in the console,
       and in 'InputMode.VOICE.value' to speak in configured mic.
     - response_in_text: If True: The assistant will print in the console the response
-    - response_in_speech: If True: The assistant will produce voice response via audio output.               
+    - response_in_speech: If True: The assistant will produce voice response via audio output. 
+    
+    
+    I also want to add more features in the voice because in my opinion it will boring if the voice assistant can only do one thing. 
 """
 
 
 DEFAULT_GENERAL_SETTINGS = {
-    'assistant_name': 'Jarvis',
+    'assistant_name': 'Domno',
     'enabled_period': 300,
     'input_mode': InputMode.TEXT.value,
     'response_in_speech': False,
