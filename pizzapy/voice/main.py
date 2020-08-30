@@ -3,12 +3,8 @@ import logging
 import time
 from logging import config
 
-from voice.core.processor import Processor
-from voice import settings
-from voice.settings import ROOT_LOG_CONF
-from voice.utils.mongoDB import db
-from voice.utils.startup import internet_connectivity_check, configure_MongoDB
-from voice.core.console_manager import ConsoleManager
+from brain import *
+
 
 # Create a Console & Rotating file logger
 config.dictConfig(ROOT_LOG_CONF)
