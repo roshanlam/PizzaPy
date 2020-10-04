@@ -1,48 +1,32 @@
+import os 
+import sys 
+import json 
+import importlib
+import shutil
+import pyttsx3
+import speech_recognition as sr 
 
-import logging
-import time
-from logging import config
+from core.scripts.colors import red, yellow, green, white
 
-from brain import *
+class AI:
+	def __init__(self, abilitiesPath = 'Data/Abilities/', cachePath = 'Data/Cache/', integrate = True):
+		self.abilitiesPath = abilitiesPath
+		self.cachePath = cachePath
 
+		self.recogninzer = sr.Recogninzer()
+		self.microphone = sr.Microphone()
 
-# Create a Console & Rotating file logger
-config.dictConfig(ROOT_LOG_CONF)
+		# wake up words for the AI
+		self.wake = ['Jarvis', 'Roshan', 'AI']
 
+		self.responses = { 'yes': ['yes', 'yep', 'yeah', 'ya'],
+						   'no' : ['no', 'nah', 'nope']
+						  }
 
-def main():
-    """
-    Do initial checks, clear the console and print the assistant logo.
-    STEP 1: Clear log file in each assistant fresh start
-    STEP 2: Checks for internet connectivity
-    STEP 3: Configuare MongoDB, load skills and settings
-    STEP 4: Clear console
-    """
+		try:
+			self.engine = pyttsx3.init()
+		except ModuleNotFoundError:
+			print(red('\n[-] Dependency Not Found!'))
+			print(yellow('[!] Install \"pywin32\" to Continue...'))
+			sys.exit(0)
 
-    # STEP 1
-    with open(ROOT_LOG_CONF['handlers']['file']['filename'], 'r+') as f:
-        f.truncate(0)
-
-    logging.info('Startup checks..')
-
-    # STEP 2
-    if not internet_connectivity_check():
-        logging.warning('Skills with internet connection will not work :-(')
-        time.sleep(3)
-
-    # STEP 3
-    configure_MongoDB(db, settings)
-
-    # STEP 4
-    console_manager = ConsoleManager()
-    logging.info('Application started')
-    console_manager.console_output()
-
-    processor = Processor(settings, db)
-
-    while True:
-        processor.run()
-
-
-if __name__ == '__main__':
-    main()
