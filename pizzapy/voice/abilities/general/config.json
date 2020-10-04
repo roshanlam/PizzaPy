@@ -1,0 +1,27 @@
+{
+    "name": "General Conversational",
+    "version": "1.0.0",
+    "author": "Roshan Lamichhane",
+    "description": "Base General Library",
+    "long-description": "",
+    "main": "main.py",
+    "requirements": "",
+    "commands": {
+        "greeting": {
+            "target": "greeting",
+            "keywords": ["hello", "hi", "hey"]
+        },
+        "howru": {
+            "target": "howru",
+            "keywords": ["how you"]
+        },
+        "thanks": {
+            "target": "thanks",
+            "keywords": ["thank", "thanks"]
+        },
+        "repeat": {
+            "target": "repeat",
+            "keywords": ["repeat", "again"]
+        }
+    }
+}
