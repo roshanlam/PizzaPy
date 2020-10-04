@@ -6,7 +6,7 @@ import shutil
 import pyttsx3
 import speech_recognition as sr 
 
-from voice.core.scripts.colors import red, yellow, green, white
+from core.scripts.colors import red, yellow, green, white
 
 class AI:
 	def __init__(self, abilitiesPath = 'Data/Abilities/', cachePath = 'Data/Cache/', integrate = True):
