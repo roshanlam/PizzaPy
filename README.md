@@ -17,3 +17,4 @@ _____________
 
 - [ ] Market this as a app and software way for people with lacking motor dexterity to be able to place orders via speech
 - [ ] Update the ReadMe.
+- [ ] Create a logo for the project 
