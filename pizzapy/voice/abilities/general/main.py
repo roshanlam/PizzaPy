@@ -24,5 +24,5 @@ def repeat(AI, command):
 				exec(last)
 			else:
 				AI.speak('You have not said anything yet :(')
-		except:
-			AI.speak('You have not said anything yet')
+	except:
+		AI.speak('You have not said anything yet')
