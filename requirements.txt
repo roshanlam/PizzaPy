@@ -1,5 +1,7 @@
+mock
 requests
 pyhamcrest
-xmltodict
 pytest
-mock
+pyttsx3
+termcolor
+xmltodict
