@@ -75,7 +75,7 @@ class Menu(object):
 
 
 
-def display(self):
+    def display(self):
         def print_category(category, depth=1):
             indent = "  " * (depth + 1)
             if len(category.products) + len(category.subcategories) > 0:
