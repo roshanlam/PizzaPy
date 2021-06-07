@@ -3,5 +3,6 @@ requests
 pyhamcrest
 pytest
 pyttsx3
+SpeechRecognition
 termcolor
 xmltodict
