@@ -1,2 +1,2 @@
 class brain:
-
+    pass
